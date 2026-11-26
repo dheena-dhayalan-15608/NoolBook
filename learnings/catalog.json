@@ -1,0 +1,682 @@
+{
+ "courses": [
+  {
+   "id": "cf",
+   "name": "Computer fundamentals",
+   "ta": "கணினி அடிப்படைகள்",
+   "blurb": "What a computer is, how it works inside, how to find your way around one by typing, and how it stores numbers and text. No programming yet.",
+   "taBlurb": "கணினி என்றால் என்ன, உள்ளே அது எப்படி இயங்குகிறது, தட்டச்சு செய்து அதில் எப்படி வழி கண்டுபிடிப்பது, எண்களையும் உரையையும் அது எப்படிச் சேமிக்கிறது. இதில் இன்னும் நிரலாக்கம் இல்லை.",
+   "sections": [
+    {
+     "t": "What a computer is",
+     "ta": "கணினி என்றால் என்ன",
+     "items": [
+      {
+       "id": "c1",
+       "kind": "lesson",
+       "href": "lesson-c1",
+       "no": "",
+       "title": "What a computer is",
+       "ta": "கணினி என்றால் என்ன",
+       "minutes": 25,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "c2",
+       "kind": "lesson",
+       "href": "lesson-c2",
+       "no": "",
+       "title": "Why we need computers",
+       "ta": "நமக்குக் கணினிகள் ஏன் தேவை",
+       "minutes": 20,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "c3",
+       "kind": "lesson",
+       "href": "lesson-c3",
+       "no": "",
+       "title": "A short history of computers",
+       "ta": "கணினிகளின் சுருக்கமான வரலாறு",
+       "minutes": 30,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      }
+     ]
+    },
+    {
+     "t": "Inside the machine",
+     "ta": "இயந்திரத்தின் உள்ளே",
+     "items": [
+      {
+       "id": "n1",
+       "kind": "lesson",
+       "href": "lesson-n1",
+       "no": "0.1",
+       "title": "Input, processing, output",
+       "ta": null,
+       "minutes": 30,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "n2",
+       "kind": "lesson",
+       "href": "lesson-n2",
+       "no": "0.2",
+       "title": "CPU, RAM and storage",
+       "ta": null,
+       "minutes": 40,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "n3",
+       "kind": "lesson",
+       "href": "lesson-n3",
+       "no": "0.3",
+       "title": "Programs and algorithms",
+       "ta": null,
+       "minutes": 40,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      }
+     ]
+    },
+    {
+     "t": "Files and the terminal",
+     "ta": "கோப்புகளும் முனையமும்",
+     "items": [
+      {
+       "id": "n4",
+       "kind": "lesson",
+       "href": "lesson-n4",
+       "no": "0.4",
+       "title": "Files, folders and paths",
+       "ta": null,
+       "minutes": 45,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "n5",
+       "kind": "lesson",
+       "href": "lesson-n5",
+       "no": "0.5",
+       "title": "Clicking and typing: the shell and the terminal",
+       "ta": null,
+       "minutes": 35,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "n6",
+       "kind": "lesson",
+       "href": "lesson-n6",
+       "no": "0.6",
+       "title": "Four commands: pwd, ls, cd, mkdir",
+       "ta": null,
+       "minutes": 60,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      }
+     ]
+    },
+    {
+     "t": "How data is stored",
+     "ta": "தரவு எப்படிச் சேமிக்கப்படுகிறது",
+     "items": [
+      {
+       "id": "m1",
+       "kind": "lesson",
+       "href": "lesson-m1",
+       "no": "1.1",
+       "title": "Bits and bytes",
+       "ta": null,
+       "minutes": 35,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m2",
+       "kind": "lesson",
+       "href": "lesson-m2",
+       "no": "1.2",
+       "title": "Counting in binary",
+       "ta": null,
+       "minutes": 40,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m3",
+       "kind": "lesson",
+       "href": "lesson-m3",
+       "no": "1.3",
+       "title": "ASCII: letters as numbers",
+       "ta": null,
+       "minutes": 35,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m4",
+       "kind": "lesson",
+       "href": "lesson-m4",
+       "no": "1.4",
+       "title": "Unicode and UTF-8",
+       "ta": null,
+       "minutes": 35,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      }
+     ]
+    },
+    {
+     "t": "Finishing the course",
+     "ta": "பாடநெறியை நிறைவு செய்தல்",
+     "items": [
+      {
+       "id": "cp:cf",
+       "kind": "checkpoint",
+       "href": "checkpoint-cf",
+       "no": "",
+       "title": "Checkpoint quiz",
+       "ta": "நிலைச் சோதனை",
+       "minutes": 0,
+       "cp": [
+        {
+         "st": "cp",
+         "k": "c0"
+        },
+        {
+         "st": "cp",
+         "k": "c1"
+        },
+        {
+         "st": "cp",
+         "k": "c2"
+        },
+        {
+         "st": "cp",
+         "k": "c3"
+        },
+        {
+         "st": "cp",
+         "k": "c8"
+        },
+        {
+         "st": "cp",
+         "k": "c10"
+        },
+        {
+         "st": "cp",
+         "k": "c11"
+        },
+        {
+         "st": "cp1",
+         "k": "d0"
+        },
+        {
+         "st": "cp1",
+         "k": "d1"
+        },
+        {
+         "st": "cp1",
+         "k": "d2"
+        }
+       ]
+      },
+      {
+       "id": "pj:machine",
+       "kind": "project",
+       "href": "project-machine",
+       "no": "",
+       "title": "Project: Know your machine",
+       "ta": null,
+       "minutes": 0,
+       "store": "projc",
+       "checks": 5
+      }
+     ]
+    }
+   ],
+   "later": []
+  },
+  {
+   "id": "py",
+   "name": "Python",
+   "ta": "Python",
+   "blurb": "Your first programming language. Set up your tools, write and run real programs, and learn how Python handles numbers, text and input.",
+   "taBlurb": "உங்கள் முதல் நிரலாக்க மொழி. உங்கள் கருவிகளை அமைத்து, உண்மையான நிரல்களை எழுதி இயக்கி, எண்கள், உரை, உள்ளீடு ஆகியவற்றை Python எப்படிக் கையாள்கிறது என்று கற்றுக்கொள்ளுங்கள்.",
+   "sections": [
+    {
+     "t": "Getting set up",
+     "ta": "அமைப்பு",
+     "items": [
+      {
+       "id": "n7",
+       "kind": "lesson",
+       "href": "lesson-n7",
+       "no": "0.7",
+       "title": "Installing Python and PyCharm",
+       "ta": null,
+       "minutes": 60,
+       "P": 2,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "n8",
+       "kind": "lesson",
+       "href": "lesson-n8",
+       "no": "0.8",
+       "title": "Your first program",
+       "ta": null,
+       "minutes": 45,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "n9",
+       "kind": "lesson",
+       "href": "lesson-n9",
+       "no": "0.9",
+       "title": "The Python prompt",
+       "ta": null,
+       "minutes": 40,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "pj:hello",
+       "kind": "project",
+       "href": "project-hello",
+       "no": "",
+       "title": "Project: Hello, me",
+       "ta": null,
+       "minutes": 0,
+       "store": "proj",
+       "checks": 6
+      }
+     ]
+    },
+    {
+     "t": "Numbers, names and types",
+     "ta": "எண்கள், பெயர்கள், வகைகள்",
+     "items": [
+      {
+       "id": "m5",
+       "kind": "lesson",
+       "href": "lesson-m5",
+       "no": "1.5",
+       "title": "Arithmetic",
+       "ta": null,
+       "minutes": 35,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m6",
+       "kind": "lesson",
+       "href": "lesson-m6",
+       "no": "1.6",
+       "title": "Variables",
+       "ta": null,
+       "minutes": 40,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m7",
+       "kind": "lesson",
+       "href": "lesson-m7",
+       "no": "1.7",
+       "title": "Types of data",
+       "ta": null,
+       "minutes": 45,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      }
+     ]
+    },
+    {
+     "t": "Text and input",
+     "ta": "உரையும் உள்ளீடும்",
+     "items": [
+      {
+       "id": "m8",
+       "kind": "lesson",
+       "href": "lesson-m8",
+       "no": "1.8",
+       "title": "Joining text and values",
+       "ta": null,
+       "minutes": 35,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m9",
+       "kind": "lesson",
+       "href": "lesson-m9",
+       "no": "1.9",
+       "title": "Asking the user a question",
+       "ta": null,
+       "minutes": 30,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m10",
+       "kind": "lesson",
+       "href": "lesson-m10",
+       "no": "1.10",
+       "title": "Converting between types",
+       "ta": null,
+       "minutes": 40,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      }
+     ]
+    },
+    {
+     "t": "Details that matter",
+     "ta": "முக்கியமான விவரங்கள்",
+     "items": [
+      {
+       "id": "m11",
+       "kind": "lesson",
+       "href": "lesson-m11",
+       "no": "1.11",
+       "title": "When decimals misbehave",
+       "ta": null,
+       "minutes": 30,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      },
+      {
+       "id": "m12",
+       "kind": "lesson",
+       "href": "lesson-m12",
+       "no": "1.12",
+       "title": "Comments and good names",
+       "ta": null,
+       "minutes": 25,
+       "P": 3,
+       "Q": 4,
+       "T": 2
+      }
+     ]
+    },
+    {
+     "t": "Finishing this part",
+     "ta": "இந்தப் பகுதியை நிறைவு செய்தல்",
+     "items": [
+      {
+       "id": "cp:py",
+       "kind": "checkpoint",
+       "href": "checkpoint-py",
+       "no": "",
+       "title": "Checkpoint quiz",
+       "ta": "நிலைச் சோதனை",
+       "minutes": 0,
+       "cp": [
+        {
+         "st": "cp",
+         "k": "c4"
+        },
+        {
+         "st": "cp",
+         "k": "c5"
+        },
+        {
+         "st": "cp",
+         "k": "c6"
+        },
+        {
+         "st": "cp",
+         "k": "c7"
+        },
+        {
+         "st": "cp",
+         "k": "c9"
+        },
+        {
+         "st": "cp1",
+         "k": "d3"
+        },
+        {
+         "st": "cp1",
+         "k": "d4"
+        },
+        {
+         "st": "cp1",
+         "k": "d5"
+        },
+        {
+         "st": "cp1",
+         "k": "d6"
+        },
+        {
+         "st": "cp1",
+         "k": "d7"
+        },
+        {
+         "st": "cp1",
+         "k": "d8"
+        },
+        {
+         "st": "cp1",
+         "k": "d9"
+        }
+       ]
+      },
+      {
+       "id": "pj:tip",
+       "kind": "project",
+       "href": "project-tip",
+       "no": "",
+       "title": "Project: Tip calculator",
+       "ta": null,
+       "minutes": 0,
+       "store": "proj1",
+       "checks": 6
+      }
+     ]
+    }
+   ],
+   "later": [
+    {
+     "level": 2,
+     "name": "True, false and decisions",
+     "ta": null,
+     "topics": [
+      "Comparisons",
+      "and, or, not",
+      "if",
+      "if and else",
+      "if, elif, else",
+      "Nesting",
+      "Indentation",
+      "Flowcharts",
+      "Truthiness"
+     ]
+    },
+    {
+     "level": 3,
+     "name": "Loops, tracing and pseudocode",
+     "ta": null,
+     "topics": [
+      "while loops",
+      "for loops and range",
+      "Looping over text",
+      "Running totals",
+      "break and continue",
+      "Loops inside loops",
+      "Infinite loops",
+      "Trace tables",
+      "Pseudocode",
+      "Milestone: number guessing game"
+     ]
+    },
+    {
+     "level": 4,
+     "name": "Functions and the call stack",
+     "ta": null,
+     "topics": [
+      "Built-in functions",
+      "Writing a function",
+      "Parameters and arguments",
+      "return and print",
+      "Default values",
+      "Scope",
+      "Docstrings",
+      "Combining functions",
+      "The call stack",
+      "Breaking problems down"
+     ]
+    },
+    {
+     "level": 5,
+     "name": "Text, lists and dictionaries",
+     "ta": null,
+     "topics": [
+      "Strings",
+      "Lists",
+      "Tuples",
+      "Sets",
+      "Dictionaries",
+      "Choosing a structure",
+      "Changeable or not",
+      "Two names, one list",
+      "How lists and dictionaries work inside",
+      "Milestone: grade book"
+     ]
+    },
+    {
+     "level": 6,
+     "name": "Errors and debugging",
+     "ta": null,
+     "topics": [
+      "Kinds of error",
+      "Reading an error report",
+      "Common error types",
+      "A debugging method",
+      "The step debugger",
+      "Rubber-duck debugging",
+      "try and except",
+      "raise",
+      "Simple tests"
+     ]
+    },
+    {
+     "level": 7,
+     "name": "Modules, files and Git",
+     "ta": null,
+     "topics": [
+      "Importing",
+      "The standard library",
+      "Your own module",
+      "Installing packages",
+      "Virtual environments",
+      "Reading and writing files",
+      "Paths in Python",
+      "CSV files",
+      "Version control",
+      "Starting with Git",
+      "Saving snapshots",
+      "Ignoring files",
+      "GitHub",
+      "Working in larger projects"
+     ]
+    },
+    {
+     "level": 8,
+     "name": "Speed, searching and sorting",
+     "ta": null,
+     "topics": [
+      "Counting steps",
+      "Time and space",
+      "Big-O",
+      "Common growth rates",
+      "Linear search",
+      "Binary search",
+      "Bubble sort",
+      "Selection sort",
+      "Insertion sort",
+      "Timing code"
+     ]
+    },
+    {
+     "level": 9,
+     "name": "Objects and classes",
+     "ta": null,
+     "topics": [
+      "Why objects",
+      "Classes and instances",
+      "Setting up an object",
+      "Methods",
+      "Printing objects",
+      "Lists of objects",
+      "Inheritance",
+      "Encapsulation",
+      "When not to use a class"
+     ]
+    },
+    {
+     "level": 10,
+     "name": "Recursion and data structures",
+     "ta": null,
+     "topics": [
+      "Recursion",
+      "Tracing recursion",
+      "Recursion or loops",
+      "Merge sort",
+      "Stacks",
+      "Queues",
+      "Linked lists",
+      "A small hash table",
+      "Binary search trees",
+      "Milestone: library system"
+     ]
+    },
+    {
+     "level": 11,
+     "name": "Capstone and review",
+     "ta": null,
+     "topics": [
+      "Planning a project",
+      "Writing a README",
+      "Testing checklist",
+      "Mixed review",
+      "Capstone: personal finance tracker"
+     ]
+    }
+   ]
+  }
+ ]
+}

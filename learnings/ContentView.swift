@@ -1,61 +1,67 @@
 //
 //  ContentView.swift
-//  learnings
-//
-//  Created by Dheena Dhayalan P on 5/3/2026.
+//  The app's tabs: Learn, Explore, Debug Desk and Account. On iPad and Mac they become a sidebar.
 //
 
 import SwiftUI
-import SwiftData
+
+enum AppTab: Hashable { case learn, explore, debug, account }
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var tab: AppTab = .learn
+    @State private var learner = Learner.shared
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        TabView(selection: $tab) {
+            Tab(t("Learn", "கற்க"), systemImage: "book", value: .learn) { LearnView() }
+            Tab(t("Explore", "ஆராய்க"), systemImage: "sparkles", value: .explore) { ExploreView() }
+            Tab(t("Debug Desk", "பிழைதிருத்த மேசை"), systemImage: "bubble.left.and.bubble.right", value: .debug) {
+                SitePageScreen(page: .debug, route: "debug", title: t("Debug Desk", "பிழைதிருத்த மேசை"))
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            Tab(t("Account", "கணக்கு"), systemImage: "person.crop.circle", value: .account) {
+                SitePageScreen(page: .account, route: "account", title: t("Account", "கணக்கு"))
             }
-        } detail: {
-            Text("Select an item")
         }
+        .tabViewStyle(.sidebarAdaptable)
+        .preferredColorScheme(learner.theme == "dark" ? .dark : learner.theme == "light" ? .light : nil)
+        .task { WebPage.learn.warm() }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
+    private func t(_ en: String, _ ta: String) -> String { learner.lang == .ta ? ta : en }
+}
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+/// A whole tab that is one page of the site (Debug Desk, Account).
+struct SitePageScreen: View {
+    let page: WebPage
+    let route: String
+    let title: String
+
+    var body: some View {
+        NavigationStack {
+            WebPageView(page: page)
+                .navigationTitle(title)
+                #if os(iOS)
+                .navigationBarTitleDisplayMode(.inline)
+                #endif
+                .toolbar {
+                    ToolbarItem(placement: .navigation) {
+                        if page.canGoBack {
+                            Button { page.goBack() } label: { Label("Back", systemImage: "chevron.backward") }
+                        }
+                    }
+                    ToolbarItem(placement: .primaryAction) {
+                        Button { page.reload() } label: { Label("Reload", systemImage: "arrow.clockwise") }
+                            .keyboardShortcut("r", modifiers: .command)
+                    }
+                }
+        }
+        .onAppear {
+            page.refreshIfStale()
+            page.open(page.route.isEmpty ? route : page.route)
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
